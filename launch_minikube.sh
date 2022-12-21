@@ -16,7 +16,7 @@ cat << EOF > ~/.minikube/files/etc/hosts
 ${MY_MINIKUBE_IP} dex.dex
 EOF
 
-minikube start --v=5 --vm-driver=${VM_DRIVER} --memory=4096 \
+minikube start -p leaf --v=5 --vm-driver=${VM_DRIVER} --memory=4096 \
 --extra-config=apiserver.authorization-mode=Node,RBAC \
 --extra-config=apiserver.oidc-issuer-url=https://dex.dex:32000 \
 --extra-config=apiserver.oidc-username-claim=email \

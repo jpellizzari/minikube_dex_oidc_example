@@ -84,7 +84,11 @@ data:
         clientID: $GITHUB_CLIENT_ID
         clientSecret: $GITHUB_CLIENT_SECRET
         redirectURI: https://dex.dex:32000/callback
-        org: kubernetes
+        orgs:
+        - name: wge-test-org-jp
+          teams:
+          - team-a
+          - team-b
     oauth2:
       skipApprovalScreen: true
 
